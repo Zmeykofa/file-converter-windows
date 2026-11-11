@@ -22,6 +22,7 @@ Compression=lzma2/fast
 SolidCompression=yes
 WizardStyle=modern
 PrivilegesRequired=lowest
+UninstallDisplayName={#MyAppName}
 UninstallDisplayIcon={app}\Converter.exe
 VersionInfoVersion=1.0.0.0
 VersionInfoCompany=Open Source
@@ -52,6 +53,9 @@ Source: "components\*"; DestDir: "{app}\components"; Flags: ignoreversion recurs
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; IconFilename: "{app}\app.ico"
 Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; IconFilename: "{app}\app.ico"; Tasks: desktopicon
+
+[Registry]
+Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Uninstall\FileConverter"; Flags: deletekey dontcreatekey
 
 [Run]
 Filename: "powershell.exe"; Parameters: "-NoProfile -ExecutionPolicy Bypass -File ""{app}\install-menu.ps1"" -TargetDir ""{app}"""; Flags: runhidden; Tasks: contextmenu
