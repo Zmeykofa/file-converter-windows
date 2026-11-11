@@ -1,0 +1,21 @@
+# Ignored heavy external components (packaged into installer)
+components/
+components.7z
+
+# Installer outputs & builds
+dist/
+Setup.exe
+"Установка Конвертера.exe"
+
+# Temporary / build artifacts
+*.tmp
+*.log
+*.pdf
+*.7z
+*.zip
+.vs/
+bin/
+obj/
+*.user
+Thumbs.db
+desktop.ini
